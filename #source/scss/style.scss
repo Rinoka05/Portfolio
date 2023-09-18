@@ -1,0 +1,290 @@
+@import "nullstyle.scss"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.wrapper{
+	background: #0a1119;
+	width: 100%;
+	position: relative;
+	//height: 100%;
+}
+@import 'header.scss';
+@import 'main.scss';
+@import 'skills.scss';
+@import 'works.scss';
+@import 'contacts.scss';
+.title{
+	position: relative;
+	//border: 1px solid #fff;
+	& img{
+		position: absolute;
+		z-index: 0;
+	}
+	& img:first-child{
+		padding: 7px 0 0 12px;
+	}
+	& p{
+		font-family: Montserrat;
+		font-size: 48px;
+		font-weight: 600;
+		line-height: 38px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #fff;
+		padding: 37px 0 0 74px;		
+		position: relative;
+		text-transform: uppercase;
+		z-index: 5;
+	}
+}
+
+.cv {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border-radius: 25px;
+	border: 3px solid rgba(102, 0, 0, 1);
+	transform: translate(-50%, 20px);
+	z-index: 11;
+	width: 80%;	
+	& .container{
+		//max-width: 80%
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	background: #0a1119;
+	&_disactive{
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.cv .container{		
+		display: block;				
+	}
+	.left__photo{
+		margin: 0 auto;
+	}
+	
+}
+.cv__close{
+	max-width: 60px;
+	max-height: 60px;
+	top: 5px;
+	right: 10px;
+	position: absolute;
+	& img{
+		width: 100%;
+	}
+	transition: .5s;	
+	&:hover{
+		cursor: pointer;
+		transform: scale(1.1, 1.1);
+		transition: .5s;
+	}
+}
+.container {}
+.cv__left {
+	padding: 20px 10%;
+	background: #fff;
+}
+.left__photo {
+	max-width: 200px;
+	overflow: hidden;
+	border-radius: 50%;
+	& img{
+		width: 100%;
+	}
+}
+.left__contacts {
+	& p, & a{
+		margin: 3px 0 0 0;
+		display: block;
+		font-family: Montserrat;
+		font-size: 18px;
+		padding: 0 0 5px 0;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	& p{
+		margin: 10px 0 0 0;
+	}
+	& a{
+		text-decoration: underline;
+	}
+}
+.left__titile {
+	margin: 20px 0 0 0;
+	font-family: Montserrat;
+	font-size: 28px;
+	//border: 1px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 0 0 5px 0;
+	font-weight: 600;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.left__map {
+	&:before{
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url('../img/cv/map.png')0 0/cover no-repeat;
+		//background: #000;
+		margin: auto 5px auto 0;
+	}
+}
+.left__telegram {
+	display: block;
+	&:before{
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url('../img/cv/tg.png')0 0/cover no-repeat;
+		//background: #000;
+		margin: auto 5px auto 0;
+	}
+}
+.left__mail {
+	color: #000;
+	display: inline-block;
+	width: 100%;
+	&:before{
+		content: '';
+		display: inline-block;		
+		width: 20px;
+		height: 20px;
+		background: url('../img/cv/mail.png')0 0/cover no-repeat;
+		//background: #000;
+		margin: auto 5px auto 0;
+	}
+}
+.left__github {
+	&:before{
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url('../img/cv/gh.png')0 0/cover no-repeat;
+		//background: #000;
+		margin: auto 5px auto 0;
+	}
+}
+.left__skills {
+	& p:nth-child(2){
+		margin: 5px 0 0 0;
+	}
+	& p{
+		//margin: 2px 0 0 0;
+		display: block;
+		font-family: Montserrat;
+		font-size: 18px;
+		padding: 0 0 5px 0;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: left;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 7px;
+			height: 7px;			
+			//background: url('../img/cv/gh.png')0 0/cover no-repeat;
+			background: #000;
+			border-radius: 50%;
+			transform: translate(0, -25%);
+			margin: auto 5px auto 0;
+		}
+	}
+}
+.left__languages {
+	& div:nth-child(2){
+		padding: 10px 0 0 0;
+	}
+}
+.language__row {
+	margin: 7px 0 0 0;
+	display: flex;
+	justify-content: space-between;
+}
+.language__name {}
+.language__cell-color {}
+.language__cell {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	&-color{
+		background: rgba(252, 0, 0, 1);
+	}
+}
+.cv__right {
+	padding: 20px 10%;
+	color: #fff;
+	width: 100%;
+	align-self: start;
+
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.cv__name {
+	font-family: Montserrat;
+	font-size: 28px;
+	font-weight: 600;	
+	line-height: 120%;
+	text-align: center;
+	padding: 0 0 20px 0;
+	border-bottom: 2px solid #fff;	
+	&_up{
+		display: none;
+	}
+}
+.cv__subtitle {
+	margin: 15px 0 0 0;
+	font-size: 22px;	
+	text-align: center;
+}
+.cv__text {
+	margin: 25px auto 0 auto;
+	text-align: center;
+	max-width: 50%;
+
+}
+.cv__block {
+	margin: 20px 0 0 0 ;
+	& h1{
+		width: 100%;
+		color: rgba(252, 0, 0, 0.49);
+		font-size: 28px;
+		font-weight: 800;
+		padding: 0 0 15px 0;
+		border-bottom: 3px solid rgba(252, 0, 0, 0.49);		
+	}
+	& h2{
+		margin: 15px 0 0 0;
+		font-size: 20px;
+		font-weight: 600;
+		max-width: 80%;
+		margin: 15px auto 0 auto;
+		text-align: center;
+	}
+	& h3{
+		max-width: 90%;
+		margin: 15px 0 0 0;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: right;
+	}
+}
