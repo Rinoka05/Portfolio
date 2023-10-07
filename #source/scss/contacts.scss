@@ -21,6 +21,7 @@
 .contacts__row {
 	max-width: 42.29%;
 	margin: 57px auto;
+	padding: 0 0 50px 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -80,50 +81,6 @@
 	max-width: 257px;
 	margin: 56px auto 0 auto;
 }
-.contacts__form{
-	max-width: 42.29%;
-	margin: 39px auto;
-	display: flex;
-	flex-direction: column;
-	& input{
-		width: 100%;
-		height: 50px;
-		border: 1px solid rgba(91, 87, 87, 1);
-
-		font-family: Montserrat;
-		font-size: 18px;
-		font-weight: 600;
-		line-height: 18px;
-		letter-spacing: 0em;
-		text-align: left;
-		padding: 15px;
-
-		&:nth-child(2){
-			margin: 54px 0 0 0;
-		}
-		transition: .5s;		
-		&:focus{
-			transition: .5s;			
-			box-shadow: 0 0 10px 10px rgba(252, 0, 0, 0.3);
-		}
-	}
-
-	& textarea{
-		margin: 54px 0 0 0;
-		font-family: Montserrat;
-		font-size: 18px;
-		font-weight: 600;
-		line-height: 18px;
-		letter-spacing: 0em;
-		text-align: left;
-		padding: 15px;
-		transition: .5s;
-		&:focus{
-			transition: .5s;
-			box-shadow: 0 0 10px 10px rgba(252, 0, 0, 0.3);
-		}
-	}
-}
 .contacts__button {
 	background: rgba(252, 0, 0, 0.49);
 	height: 61px;
@@ -148,18 +105,12 @@
 @media (max-width: 1440px) {
 	.contacts__row{
 		max-width: 52.29%;
-	}
-	.contacts__form{
-		max-width: 52.29%;
-	}
+	}	
 }
 @media (max-width: 1024px) {
 	.contacts__row{
 		max-width: 70.29%;
-	}
-	.contacts__form{
-		max-width: 70.29%;
-	}
+	}	
 }
 @media (max-width: 768px) {
 	.contacts__row{

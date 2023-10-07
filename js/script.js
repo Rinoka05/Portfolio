@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	
+	const URL_APP = "https://script.google.com/macros/s/AKfycbzOFX4RIZiI_oQSqhTMrz31f-Xu26sM65-sfJTp_iNPqabp0KChgiYeCnxlUlS4tIUO/exec";
+	//const URL_APP = "https://script.google.com/macros/library/d/1MfM1CA-kIwIGLT5ERBZGC-YXpFuwO8-5_wA_FoBcY4itbOYzt15Mi2SF/1";
 	 $('.works__slider').slick({
 	 	arrows:false,
 	 	dots:true,
@@ -95,7 +96,7 @@ $(document).ready(function(){
 			'works': 'Портфоліо',
 			'contact': 'Контакти',
 
-			'hello': '',
+			'hello': '', 
 			'name': 'Денисенко Нікіта',
 			'disc': 'Программіст, Front-End Розробник, Mobile Розробник',
 			'myskills': 'Мої Можливості',
@@ -183,7 +184,8 @@ $(document).ready(function(){
 		e.currentTarget.offsetParent.classList.remove('skills__item_active');
 	});				
 	$('.menu__cv button').click(function (e) {
-		$('.cv').removeClass('cv_disactive');
+		$('.cv').removeClass('cv_disactive');		
+		$('.menu__row').toggleClass('menu__row_disactive');
 	});
 	$('.cv__close').click(function (e) {
 		$('.cv').addClass('cv_disactive');
@@ -194,4 +196,5 @@ $(document).ready(function(){
 			$('.cv').addClass('cv_disactive');
 		}
 	});
+	
 });
